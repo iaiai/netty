@@ -21,22 +21,20 @@
 </html>
 <script type="text/javascript">
   function loadScript(url, callback) {
+    document.getElementById("status").innerHTML = "1111";
     var script = document.createElement("script");
     script.type = "text/javascript";
-    document.getElementById("status").innerHTML = "1111";
     if(typeof(callback) != "undefined"){
       if (script.readyState) {
         script.onreadystatechange = function () {
           if (script.readyState == "loaded" || script.readyState == "complete") {
             script.onreadystatechange = null;
-            alert("aaa");
             loadMap();
             callback();
           }
         };
       } else {
         script.onload = function () {
-            alert("bbb");
           loadMap();
           callback();
         };
