@@ -23,7 +23,9 @@
   function loadScript(url, callback) {
     document.getElementById("status").innerHTML = "1111";
     var script = document.createElement("script");
+    document.getElementById("status").innerHTML = "2222";
     script.type = "text/javascript";
+    document.getElementById("status").innerHTML = "3333";
     if(typeof(callback) != "undefined"){
       if (script.readyState) {
         script.onreadystatechange = function () {
